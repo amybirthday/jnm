@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    background: #000;
+    color: #fff;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#app {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.screen {
+    display: none;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 18px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 45%, #24101d 0%, #090609 48%, #000 100%);
+}
+
+.screen.active {
+    display: flex;
+    animation: screenAppear 0.8s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes screenAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* PASSWORD SCREEN */
+
+#passwordScreen h1 {
+    font-size: clamp(25px, 5vw, 48px);
+    color: #ffb6d5;
+    text-shadow: 0 0 18px #ff3c91;
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+#passwordForm {
+    width: min(90%, 350px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#passwordInput {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ff80b5;
+    border-radius: 30px;
+    outline: none;
+    background: #170d14;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+}
+
+button {
+    padding: 13px 30px;
+    border: 1px solid #ff8fbd;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff8fbd, #d72b78);
+    color: #170611;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 18px #e83c8b55;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff5ca7;
+}
+
+#passwordMessage {
+    min-height: 25px;
+    margin-top: 18px;
+    color: #ff8fbd;
+}
+
+.shake {
+    animation: shakeScreen 0.45s ease;
+}
+
+@keyframes shakeScreen {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-9px); }
+    40%, 80% { transform: translateX(9px); }
+}
+
+/* INTRO VIDEOS */
+
+#intro1 video,
+#intro2 video {
+    width: min(95%, 1000px);
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 0 25px #ff4b9b55;
+    background: #000;
+}
+
+#introContinue1,
+#introContinue3 {
+    margin-top: 25px;
+}
+
+/* SECOND CONTINUE SCREEN */
+
+#introContinueScreen button {
+    padding: 17px 55px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #ffacd0, #f04491);
+}
+
+/* CAKE SECTION */
+
+#cakeSection h2 {
+    color: #ffc0dc;
+    font-size: clamp(30px, 6vw, 52px);
+    margin-bottom: 35px;
+    text-shadow: 0 0 18px #ff4b9b;
+}
+
+#birthdayCake {
+    position: relative;
+    width: min(75vw, 340px);
+    height: 210px;
+    margin: 25px auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px 18px 12px 12px;
+    background: linear-gradient(to bottom, #fff 0 25%, #222 25% 50%, #fff 50% 75%, #222 75%);
+    border: 3px solid #fff;
+    box-shadow: 0 0 35px #fff4;
+}
+
+#birthdayCake::before {
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 28px;
+    top: -22px;
+    left: -2.5%;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #222;
+}
+
+#birthdayCake::after {
+    content: "🕯️  🕯️  🕯️";
+    position: absolute;
+    top: -80px;
+    font-size: 35px;
+}
+
+.cakeText {
+    position: relative;
+    z-index: 1;
+    padding: 12px;
+    color: #000;
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: bold;
+    text-shadow: 0 1px 2px #fff;
+}
+
+/* MAIN VIDEOS */
+
+#mainVideo {
+    width: min(95%, 950px);
+    max-height: 72vh;
+    background: #000;
+    border-radius: 14px;
+    box-shadow: 0 0 25px #ff4b9b55;
+}
+
+#videoContinue {
+    margin-top: 24px;
+}
+
+/* PICTURES */
+
+#picturesSection {
+    gap: 25px;
+}
+
+#mainPicture {
+    width: min(90%, 700px);
+    max-height: 72vh;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 0 28px #ff6aa955;
+    transition: opacity 0.5s ease;
+}
+
+#pictureNext {
+    min-width: 130px;
+}
+
+/* LETTER */
+
+#letterSection {
+    justify-content: flex-start;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+#birthdayLetter {
+    width: min(95%, 850px);
+    padding: clamp(22px, 5vw, 45px);
+    border: 1px solid #e995ba;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #fff5fa, #f9dce9);
+    color: #24101a;
+    text-align: left;
+    font-family: Georgia, serif;
+    font-size: clamp(15px, 2vw, 19px);
+    line-height: 1.9;
+    box-shadow: 0 0 30px #ff5ca744;
+}
+
+#birthdayLetter h1,
+#birthdayLetter h2,
+#birthdayLetter h3 {
+    text-align: center;
+    color: #a51e59;
+    margin-bottom: 18px;
+}
+
+#birthdayLetter p {
+    margin-bottom: 18px;
+}
+
+#letterContinue {
+    margin-top: 28px;
+}
+
+/* FINAL SECTION */
+
+#finalSection {
+    gap: 30px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+#finalSection h1 {
+    width: min(95%, 850px);
+    padding: 22px 15px;
+    border-radius: 18px;
+    background: #fff0f7;
+    color: #000;
+    font-size: clamp(26px, 5vw, 48px);
+    line-height: 1.5;
+    box-shadow: 0 0 30px #ff6aa977;
+}
+
+#spaceMessage {
+    width: min(100%, 850px);
+    padding: 25px 12px;
+    color: #ffd9eb;
+    font-size: clamp(17px, 3vw, 24px);
+    line-height: 2.1;
+    overflow-wrap: anywhere;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    .screen {
+        padding: 22px 12px;
+    }
+
+    #intro1 video,
+    #intro2 video,
+    #mainVideo {
+        width: 100%;
+        max-height: 68vh;
+    }
+
+    #birthdayCake {
+        width: 78vw;
+        height: 175px;
+    }
+
+    #birthdayLetter {
+        padding: 20px 16px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+/* FLOATING BIRTHDAY BACKGROUND */
+
+#floatingBackground {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.screen {
+    z-index: 2;
+    background:
+        radial-gradient(circle at 50% 45%,
+        rgba(65, 15, 43, 0.55),
+        rgba(9, 0, 8, 0.72) 55%,
+        rgba(0, 0, 0, 0.78));
+}
+
+.floating-item {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    font-size: 28px;
+    opacity: 0;
+    animation: floatUp 13s linear infinite;
+    filter: drop-shadow(0 0 8px #ff70b5);
+}
+
+.floating-item:nth-child(1) {
+    left: 5%;
+    animation-duration: 14s;
+}
+
+.floating-item:nth-child(2) {
+    left: 17%;
+    animation-duration: 17s;
+    animation-delay: 2s;
+}
+
+.floating-item:nth-child(3) {
+    left: 29%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.floating-item:nth-child(4) {
+    left: 41%;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+
+.floating-item:nth-child(5) {
+    left: 53%;
+    animation-duration: 13s;
+    animation-delay: 5s;
+}
+
+.floating-item:nth-child(6) {
+    left: 65%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+.floating-item:nth-child(7) {
+    left: 75%;
+    animation-duration: 15s;
+    animation-delay: 6s;
+}
+
+.floating-item:nth-child(8) {
+    left: 85%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.floating-item:nth-child(9) {
+    left: 93%;
+    animation-duration: 17s;
+    animation-delay: 4s;
+}
+
+.floating-item:nth-child(10) {
+    left: 35%;
+    animation-duration: 19s;
+    animation-delay: 7s;
+}
+
+.floating-item:nth-child(11) {
+    left: 58%;
+    animation-duration: 14s;
+    animation-delay: 8s;
+}
+
+.floating-item:nth-child(12) {
+    left: 80%;
+    animation-duration: 18s;
+    animation-delay: 5s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.85;
+    }
+
+    85% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+/* FINAL FLOATING MEMORIES */
+
+#finalSection {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+#finalFloatingLayer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#finalSection > h1,
+#finalSection > #spaceMessage {
+    position: relative;
+    z-index: 2;
+}
+
+.final-floating-letter,
+.final-floating-picture {
+    position: absolute;
+    bottom: -100%;
+    opacity: 0;
+    animation: memoryRise 28s linear infinite;
+}
+
+.final-floating-letter {
+    left: 5%;
+    width: min(75vw, 580px);
+    max-height: 55vh;
+    overflow: hidden;
+    padding: 22px;
+    border-radius: 15px;
+    background: #fff0f7;
+    color: #24101a;
+    font-size: 13px;
+    line-height: 1.5;
+    box-shadow: 0 0 25px #ff6aa977;
+    animation-duration: 38s;
+}
+
+.final-floating-letter h1,
+.final-floating-letter h3 {
+    color: #a51e59;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.final-floating-picture {
+    width: clamp(100px, 18vw, 190px);
+    height: clamp(130px, 24vw, 240px);
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 14px;
+    box-shadow: 0 0 25px #ff6aa9;
+}
+
+.final-floating-picture:nth-child(2) {
+    left: 68%;
+    animation-delay: 3s;
+}
+
+.final-floating-picture:nth-child(3) {
+    left: 42%;
+    animation-delay: 10s;
+}
+
+.final-floating-picture:nth-child(4) {
+    left: 75%;
+    animation-delay: 17s;
+}
+
+@keyframes memoryRise {
+    0% {
+        transform: translateY(0) rotate(-4deg);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 0.8;
+    }
+
+    85% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-190vh) rotate(5deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .final-floating-letter {
+        width: 85vw;
+        left: 7%;
+        font-size: 11px;
+    }
+}
+/* CAKE SPACE MESSAGE ANIMATION */
+
+#cakeSection {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+#cakeSpaceMessage {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#cakeSpaceMessage .space-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    width: 100%;
+    animation: cakeSpaceRise 75s linear infinite;
+}
+
+#cakeSpaceMessage pre {
+    margin: 0;
+    color: #ffd9f0;
+    font-family: Georgia, serif;
+    font-size: clamp(13px, 2vw, 20px);
+    line-height: 1.65;
+    text-align: center;
+    white-space: pre;
+    text-shadow: 0 0 10px #ff65b5;
+}
+
+#cakeSection h2,
+#birthdayCake,
+#cakeContinue {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes cakeSpaceRise {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-220%);
+    }
+}
+
+@media (max-width: 600px) {
+    #cakeSpaceMessage pre {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+
+    <title>Only jêyå open this surprise</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="app">
+
+    <!-- PASSWORD SCREEN -->
+    <section id="passwordScreen" class="screen active">
+        <h1>Only jêyå open this surprise</h1>
+
+        <form id="passwordForm">
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter Password"
+                autocomplete="off"
+            >
+
+            <button type="submit">Unlock</button>
+        </form>
+
+        <p id="passwordMessage"></p>
+    </section>
+
+    <!-- INTRO VIDEO 1 -->
+    <section id="intro1" class="screen">
+        <video id="introVideo1" playsinline>
+            <source src="Videos/intero video 1.mp4" type="video/mp4">
+        </video>
+
+        <button id="introContinue1" class="hidden">
+            Continue
+        </button>
+    </section>
+
+    <!-- SECOND CONTINUE SCREEN -->
+    <section id="introContinueScreen" class="screen">
+        <button id="introContinue2">
+            Continue
+        </button>
+    </section>
+
+    <!-- INTRO VIDEO 2 -->
+    <section id="intro2" class="screen">
+        <video id="introVideo2" playsinline>
+            <source src="Videos/intero video2.mp4" type="video/mp4">
+        </video>
+
+        <button id="introContinue3" class="hidden">
+            Continue
+        </button>
+    </section>
+
+    <!-- CAKE SECTION -->
+    <section id="cakeSection" class="screen">
+<!-- SPACE MESSAGE IN CAKE SECTION -->
+<div id="cakeSpaceMessage">
+    <div class="space-content">
+        <pre>
+Jêyå 
+　✧　　　　　　　　　　.
+　　　　　　🪐　　　　　°
+　　.　　　　　⋆　　　　　.　　　　　🌙
+　　　　*　　　　　　.　　　　　　✦
+　.　　　　　🛸　　　　　.
+　　　　　　　𝑯𝒂𝒑𝒑𝒚
+　　.　　　　　✧　　　　　　.
+　　　　🌟　　　　　　⋆
+　.　　　　　　　°　　　　　　　.
+　　　　　☄️　　　　　　✦
+　　.　　　　　𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚
+　　　　˚　　　　　　　.
+　✦　　　　　🌙　　　　　.　　　　　🪐
+　　　.　　　　　　*　　　　　.
+　　⋆　　　　　　☄️　　　　　　𝑻𝒐
+　.　　　　　　✦　　　　　　　.
+　　　🌍　　　　　　˚
+　　.　　　　　🛸　　　　　.　　　　　🌟
+　　　　　⋆　　　　　　✧
+　.　　　　　　　𝑴𝒀
+　　.　　　　　　❤️　　　　　　.
+　　　　🌸　　　　　⋆
+　　　　　　𝑱𝑨𝑵 ❤️　.　　　　　✦　　　　　　.
+　　　🪐　　　　　　˚　　　　　☄️　　.　　　　　　⋆　　　　　　.
+　　　　　🌙　　　　　✧
+　.　　　　　　𝑴𝒚 𝑺𝒖𝒏𝒔𝒉𝒊𝒏𝒆 ☀️　　.　　　　　🌟　　　　　.
+　　　✦　　　　　　.　　　　　　🛸
+　.　　　　　˚　　　　　　☄️　　　　⋆　　　　　　🌍
+　　.　　　　　𝑴𝒚 𝑯𝒂𝒑𝒑𝒊𝒏𝒆𝒔𝒔 ❤️　.　　　　　　✧　　　　　　　.
+　　　🌙　　　　　　🪐
+　　⋆　　　　　.　　　　　✦
+　　　　.　　　　　　𝑴𝒚 𝑱𝒊𝒈𝒓𝒊𝒊𝒊
+　.　　　　　☄️　　　　　.
+　　　🌸　　　　　˚　　　　　🌟
+　　.　　　　　𝒀𝑨𝑹 🤭❤️　　　　　✦　　　　　　.
+　.　　　　　🛸　　　　　　⋆
+　　　　🌍　　　　　.　　　　　🌙
+　　.　　　　　　✧
+　　　　　𝑴𝒚 𝑩𝒆𝒔𝒕𝒊𝒆 🌸
+　.　　　　　⋆　　　　　.
+　　　🪐　　　　　✦　　　　　☄️　　.　　　　　𝑴𝒚 𝑭𝒂𝒗𝒐𝒖𝒓𝒊𝒕𝒆
+　.　　　　　🌙　　　　　.
+　　　⋆　　　　　　𝑷𝒆𝒓𝒔𝒐𝒏 ❤️　　✦　　　　　.　　　　　🌍
+　.　　　　　　☄️　　　　　　.
+　　　　˚　　　　　🌸
+　　.　　　　　𝑴𝒚 𝑶𝒏𝒆 & 𝑶𝒏𝒍𝒚 🫀
+　.　　　　　✧　　　　　.
+　　　🛸　　　　　　⋆　　　　　　🌙
+　　.　　　　　𝑴𝒚 𝑭𝒂𝒗𝒐𝒖𝒓𝒊𝒕𝒆 𝑯𝒖𝒎𝒂𝒏
+　.　　　　　　❤️🌸❤️　　　✦　　　　　　.　　　　　　🪐
+　　⋆　　　　　🌍　　　　　.
+　.　　　　　☄️　　　　　˚
+　　　🌟　　　　　　✧
+　　.　　　　　　𝑴𝒚 𝑺𝒂𝒇𝒆 𝑷𝒍𝒂𝒄𝒆 ❤️　.　　　　　🌙　　　　　　.
+　　　　⋆　　　　　✦
+　　.　　　　　　🛸　　　　　　.
+　　　　　𝑴𝒚 𝑷𝒆𝒂𝒄𝒆 🕊️　.　　　　　🌸　　　　　⋆
+　　　🪐　　　　　　.　　　　　☄️　　✧　　　　　.　　　　　🌍
+　.　　　　　　𝑴𝒚 𝑷𝒒𝒈𝒂𝒍𝒑𝒂𝒏 🤭
+　　🌙　　　　　⋆　　　　　.
+　.　　　　　✦　　　　　　🌟
+　　　.　　　　　　🛸
+　　　　　𝑴𝒚 𝑬𝒏𝒅𝒍𝒆𝒔𝒔 𝑺𝒎𝒊𝒍𝒆 ❤️　.　　　　　　☄️　　　　　.
+　　　⋆　　　　　🌍　　　　　✦
+　.　　　　　　𝑴𝒚 𝑭𝒐𝒓𝒆𝒗𝒆𝒓 𝑱𝑨𝑵
+　　❤️🌸❤️🌸❤️　.　　　　　🌙　　　　　　.
+　　　🪐　　　　　✧　　　　　☄️　　.　　　　　⋆　　　　　　.
+　　　　𝑴𝒂𝒚 𝑨𝒍𝒍𝒂𝒉 𝑩𝒍𝒆𝒔𝒔 𝒀𝒐𝒖 🤲🏻
+　.　　　　　🌟　　　　　.
+　　　✦　　　　　　🌍
+　　.　　　　　𝑴𝒂𝒚 𝒀𝒐𝒖𝒓 𝑫𝒓𝒆𝒂𝒎𝒔
+　.　　　　　𝑪𝒐𝒎𝒆 𝑻𝒓𝒖𝒆 ✨
+　　🌙　　　　　　⋆　　　　　　.
+　　　🪐　　　　　☄️　.　　　　　　𝑲𝒆𝒆𝒑 𝑺𝒉𝒊𝒏𝒊𝒏𝒈 🌟
+　　.　　　　　✦　　　　　.
+　　　　🌸　　　　　　🌍
+　.　　　　　𝑲𝒆𝒆𝒑 𝑺𝒎𝒊𝒍𝒊𝒏𝒈 ❤️　　⋆　　　　　.　　　　　☄️　.　　　　　　🌙　　　　　　✧
+　　　𝑺𝒕𝒂𝒚 𝑩𝒍𝒆𝒔𝒔𝒆𝒅 🤲🏻
+　　.　　　　　🌟　　　　　.
+　　　　🪐　　　　　⋆
+　.　　　　　　✦　　　　　　🌍
+　　.　　　　　❤️　　　　　.
+　　　　　𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🎂
+　.　　　　　🌸　　　　　　.
+　　　✦　　　　　𝑴𝒚 𝑱𝑨𝑵 ❤️　　.　　　　　　☄️　　　　　　.
+　　　　🌙　　　　　⋆
+　.　　　　　🌍　　　　　✧
+　　　🪐　　　　　　.　　　　　🌟
+　　.　　　　　　❤️🌸❤️　.　　　　　⋆　　　　　　.
+　　　☄️
+        </pre>
+    </div>
+</div>
+        <h2>Happy Birthday!</h2>
+        <div id="birthdayCake">
+            <div class="cakeText">My Princess Ridu HBD</div>
+        </div>
+
+        <button id="cakeContinue">Continue</button>
+    </section>
+
+    <!-- THREE MAIN VIDEOS -->
+    <section id="videosSection" class="screen">
+        <video id="mainVideo" playsinline controls></video>
+
+        <button id="videoContinue" class="hidden">
+            Chandnii
+        </button>
+    </section>
+
+    <!-- PICTURE SECTION -->
+    <section id="picturesSection" class="screen">
+        <img id="mainPicture" src="Pictures/pic1.jpeg" alt="Birthday picture">
+
+        <button id="pictureNext">Next</button>
+    </section>
+
+    <!-- LETTER SECTION -->
+    <section id="letterSection" class="screen">
+        <article id="birthdayLetter">
+            <!-- Your complete birthday letter will be added here. -->
+        </article>
+
+        <button id="letterContinue">Continue</button>
+    </section>
+
+    <!-- FINAL SPACE SECTION -->
+    <section id="finalSection" class="screen">
+        <h1>Happy Birthday My Princess Ridu</h1>
+
+        <div id="spaceMessage">
+            <!-- Your complete space birthday message will be added here. -->
+        </div>
+    </section>
+
+</main>
+<!-- FLOATING BACKGROUND DECORATIONS -->
+<div id="floatingBackground">
+    <div class="floating-item">🌹</div>
+    <div class="floating-item">🌸</div>
+    <div class="floating-item">⭐</div>
+    <div class="floating-item">🌙</div>
+    <div class="floating-item">✨</div>
+    <div class="floating-item">🎈</div>
+    <div class="floating-item">🌹</div>
+    <div class="floating-item">🌟</div>
+    <div class="floating-item">🌺</div>
+    <div class="floating-item">🌙</div>
+    <div class="floating-item">💫</div>
+    <div class="floating-item">🎈</div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
